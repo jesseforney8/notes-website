@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title%}Home Page{% endblock %}
+
+
+
+{% block body%}
+
+{% for note in user.notes %}
+
+
+<ul class="list-group">
+    <li class="list-group-item">{{ note.data }}
+    <button type="button" class="close" onclick="deleteNote('{{ note.id }}')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+  </ul>
+
+{% endfor %}
+
+<form method="POST">
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="note" name="note" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Notes</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+{% endblock %}

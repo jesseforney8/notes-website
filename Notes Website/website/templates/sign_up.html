@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title%}Sign Up{% endblock %}
+
+{% block body%}
+<form method="POST">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+      <div id="email" class="form-text">We'll never share your email with anyone else.</div>
+      <label for="firstname" class="form-label">Name</label>
+      <input type="firstname" class="form-control" id="firstname" name="firstname" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="password1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="Password1" name="password1">
+      <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="Password2" name="password2">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+{% endblock %}
